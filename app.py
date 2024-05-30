@@ -54,7 +54,6 @@ def events():
         events = events.loc[events["date"] >= start_date]
     if end_date is not None:
         events = events.loc[events["date"] < end_date]
-    # 이벤트를 dict 로 변형해서 json 으로 생성해서 리턴.
     return jsonify(events.to_dict(orient="records"))
 
 
