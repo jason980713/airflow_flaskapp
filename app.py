@@ -50,6 +50,7 @@ def events():
     start_date = _str_to_datetime(request.args.get("start_date", None))
     end_date = _str_to_datetime(request.args.get("end_date", None))
     events = app.config.get("events")
+    print("HI")
     if start_date is not None:
         events = events.loc[events["date"] >= start_date]
     if end_date is not None:
