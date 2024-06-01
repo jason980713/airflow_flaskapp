@@ -14,6 +14,7 @@ def _generate_events(end_date):
         ],
         axis=0,
     )
+    print("a")
     return events
 
 
